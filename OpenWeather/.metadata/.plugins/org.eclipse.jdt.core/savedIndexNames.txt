@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+D:\CUstuff\2NDYEAR\A202SGI\SUBMISSIONREPOSATORY\OpenWeather\.metadata\.plugins\org.eclipse.jdt.core
+710410728.index
+1284074322.index
+3878322753.index

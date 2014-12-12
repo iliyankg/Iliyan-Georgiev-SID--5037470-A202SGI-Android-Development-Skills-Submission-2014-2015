@@ -1,0 +1,119 @@
+package com.example.weatherapp;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class JSONpasser {
+	
+	//Holds the json string.
+	private static String jsonString;
+	
+	Log.d("hello", jsonString);
+	
+	public JSONpasser(String passed)
+	{
+		
+		jsonString = passed;
+		
+	}
+		
+	//Functions to retrieve the appropriate element from the JSON code
+	//via the use of JSONObjects.
+	public String getCity()
+	{
+		String name = null;
+		try
+		{
+			name = (new JSONObject(jsonString)).getString("name");
+		}
+		catch(JSONException e)
+		{
+			e.printStackTrace();
+		}
+		
+		return name;
+	}
+
+	public String getCountry()
+	{
+		String name = null;
+		try
+		{
+			JSONObject sys = (new JSONObject(jsonString)).getJSONObject("sys");
+			name = sys.getString("country");
+		}
+		catch(JSONException e)
+		{
+			e.printStackTrace();
+		}
+		return name;
+	}
+
+	public String getWeather()
+	{
+		String weather = null;
+		try
+		{
+			JSONArray jsnWeather = (new JSONObject(jsonString).getJSONArray("weather"));
+			JSONObject temp = jsnWeather.getJSONObject(0);
+			weather = temp.getString("description");
+		}
+		catch(JSONException e)
+		{
+			e.printStackTrace();
+		}
+		return weather;
+	}
+
+	public String getTemp()
+	{
+		int temp = 0;
+		String tempstr = null;
+		StringBuilder tostring = new StringBuilder();
+		try
+		{
+			JSONObject main = (new JSONObject(jsonString).getJSONObject("main"));
+			temp = main.getInt("temp");
+		}
+		catch(JSONException e)
+		{
+			e.printStackTrace();
+		}
+		tostring.append(temp - 272);
+		tempstr = tostring.toString();
+		return tempstr;
+	}
+
+	public String getId()
+	{
+		
+		String id = null;
+		try
+		{
+			JSONArray jsnid = (new JSONObject(jsonString).getJSONArray("weather"));
+			JSONObject temp = jsnid.getJSONObject(0);
+			id = temp.getString("icon");
+		}
+		catch(JSONException e)
+		{
+			e.printStackTrace();
+		}
+		return id;
+	}
+
+	public String getWindSpeed()
+	{
+		String wind = null;
+		try
+		{
+			JSONObject sys = (new JSONObject(jsonString)).getJSONObject("wind");
+			wind = sys.getString("speed");
+		}
+		catch(JSONException e)
+		{
+			e.printStackTrace();
+		}
+		return wind;
+	}
+}

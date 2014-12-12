@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WeatherApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="findbtn">Find</string>
+    <string name="findhint">City,Country</string>
+    <string name="location_action">Find my location</string>
+</resources>

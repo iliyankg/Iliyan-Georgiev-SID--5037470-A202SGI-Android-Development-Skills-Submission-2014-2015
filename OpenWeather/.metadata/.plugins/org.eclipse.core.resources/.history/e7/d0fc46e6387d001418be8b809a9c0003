@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@drawable/day"
+    tools:context="com.example.weatherapp.MainActivity" >
+	    
+    <LinearLayout
+        android:id="@+id/weathercondition"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingTop="50dp"
+	    android:paddingLeft="10dp"
+	    >
+	    <ImageView 
+	    android:id="@+id/conditionsprite"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/rain"
+	    /> 
+	</LinearLayout>
+    
+    
+	<LinearLayout
+	    android:id="@+id/sunlayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingTop="180dp"
+	    android:paddingLeft="175dp"
+	    >
+	    
+	    <ImageView 
+	    android:id="@+id/sunsprite"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/sun"
+	    /> 
+	    
+	</LinearLayout>
+
+    
+ 	<ImageView 
+ 	    android:id="@+id/cloudsprite" 
+ 	    android:layout_width="wrap_content" 
+ 	    android:layout_height="wrap_content" 
+ 	    android:src="@drawable/clouds" 
+ 	    />
+ 	
+ 	<LinearLayout
+	    android:id="@+id/groundlayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingTop="300dp"
+	    >
+	    
+	
+ 	<ImageView 
+ 	    android:id="@+id/groundsprite" 
+ 	    android:layout_width="wrap_content" 
+ 	    android:layout_height="wrap_content" 
+ 	    android:src="@drawable/ground"
+ 	    />
+ 	</LinearLayout>
+ 	
+ 	<LinearLayout
+	    android:id="@+id/windlayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingTop="270dp"
+	    android:paddingLeft="30dp"
+	    >
+ 	<ImageView 
+ 	    android:id="@+id/windsprite" 
+ 	    android:layout_width="wrap_content" 
+ 	    android:layout_height="wrap_content" 
+ 	    android:src="@drawable/wind"  
+ 	    />
+ 	</LinearLayout>
+ 	
+   <TextView 
+       android:id="@+id/city" 
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content" 
+       android:text="" 
+       android:paddingTop="310dp"
+       android:paddingLeft="90dp"
+       android:textStyle="bold"
+       android:textColor="#FFF"
+       android:textSize="32sp"
+       />
+   <TextView 
+       android:id="@+id/country" 
+       android:layout_toRightOf="@id/city" 
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content" 
+       android:text="" 
+       android:paddingTop="310dp"
+       android:paddingLeft="10dp"
+       android:textStyle="bold"
+       android:textColor="#FFF"
+       android:textSize="32sp"
+       />
+   <TextView
+        android:id="@+id/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="bold"
+        android:paddingTop="5dp"
+        android:paddingLeft="110dp"
+      	android:textColor="#FFF"
+      	android:textSize="20sp"
+      	android:textAllCaps="true"
+        />
+    <TextView
+        android:id="@+id/temp"
+        android:layout_below="@id/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:paddingTop="50dp"
+        android:paddingLeft="5dp"
+        android:textStyle="bold"
+      	android:textColor="#FFF"
+      	android:textSize="20sp"
+        />
+    
+    <TextView
+        android:id="@+id/windSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:paddingTop="240dp"
+        android:paddingLeft="50dp"
+        android:textStyle="bold"
+      	android:textColor="#FFF"
+      	android:textSize="20sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/searchBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#6B6B6B" >
+		
+       
+        <Button
+            android:id="@+id/find"
+            android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+           	
+           	android:layout_alignRight="true"
+           	android:text="@string/findbtn"
+           	/>
+         <EditText 
+            android:id="@+id/enteredTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/findhint"
+            android:layout_toLeftOf="@id/find"
+            />
+     
+    </RelativeLayout>
+    
+</RelativeLayout>
