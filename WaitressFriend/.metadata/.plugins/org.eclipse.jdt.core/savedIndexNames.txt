@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+D:\CUstuff\2NDYEAR\A202SGI\SUBMISSIONREPOSATORY\Iliyan-Georgiev-SID--5037470-A202SGI-Android-Development-Skills-Submission-2014-2015\WaitressFriend\.metadata\.plugins\org.eclipse.jdt.core
+1284074322.index
+2391514656.index
+2929061018.index
